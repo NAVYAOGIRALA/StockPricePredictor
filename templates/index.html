@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1><title>Stock Price Predictor Web App</title></h1>
+    <p>Enter the values for Open, High, Low, Adj Close, and Volume to predict the Closing value of stock</p>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Open">Open:</label>
+        <input type="text" name="Open" required>
+        
+        <label for="High">High:</label>
+        <input type="High" name="High" required>
+
+        <label for="Low">low:</label>
+        <input type="Low" name="Low" required>
+
+        <label for="Adj Close">Adj Close:</label>
+        <input type="text" name="Adj Close" required>
+
+        <label for="Volume">Volume:</label>
+        <input type="text" name="Volume" required>
+
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
